@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1223838511878874931}
   - component: {fileID: 1226850509223623152}
   - component: {fileID: 8459540067156468094}
-  - component: {fileID: 9122431204280507522}
   - component: {fileID: 1671236939624516036}
+  - component: {fileID: 2604575119094552984}
   m_Layer: 0
   m_Name: ufoGreen
   m_TagString: Enemy
@@ -132,18 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.91, y: 0.91}
   m_EdgeRadius: 0
---- !u!114 &9122431204280507522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5662627220969052030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd90510540cbf624aaadad7f016da693, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1671236939624516036
 Rigidbody2D:
   serializedVersion: 4
@@ -159,7 +147,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -171,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2604575119094552984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5662627220969052030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd90510540cbf624aaadad7f016da693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedY: -1

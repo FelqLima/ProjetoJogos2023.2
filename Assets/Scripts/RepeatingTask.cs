@@ -8,9 +8,9 @@ public class RepeatingTask : MonoBehaviour
     public GameObject enemy;
 
     [SerializeField]
-    private int x = 7;
+    private float x = 6;
     
-    private int y = 5;
+    private float y = 5;
 
     // Start is called before the first frame update
     void Start()

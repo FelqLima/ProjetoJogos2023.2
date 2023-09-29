@@ -3,6 +3,7 @@
  
  Unity versão 2022.3.7f1
  2D Core
+ Display WXGA (1366x768)
  
  Equipe:
  

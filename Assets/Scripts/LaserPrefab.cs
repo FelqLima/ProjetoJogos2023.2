@@ -5,18 +5,16 @@ using UnityEngine.UI;
 
 public class LaserPrefab : MonoBehaviour
 {
-    
+    [SerializeField]
     private float _speedY = 10f;
 
     private Rigidbody2D _rb2d;
-    private Text _score;
 
     // Start is called before the first frame update
     void Start()
     {
         Destroy(this.gameObject, 0.7f);
         _rb2d = GetComponent<Rigidbody2D>();
-        _score = GameObject.Find("Score").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -28,10 +26,9 @@ public class LaserPrefab : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Enemy")){
-            PontuacaoController.Pontuacao++;
-            _score.text = "Pontos: " + PontuacaoController.Pontuacao.ToString();
+            
+            other.gameObject.GetComponent<EnemySpaceshipController>().Destruir();
             Destroy(this.gameObject);
-            Destroy(other.gameObject);
         }
     }
 }

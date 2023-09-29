@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac4a5784248d6548801a7ce437a65d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 3
   prefabLaser: {fileID: 7667973889347168638, guid: 213ec6031a522414eab2e467845943c5, type: 3}
 --- !u!212 &170683380
 SpriteRenderer:
@@ -637,7 +638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -684, y: 462.79}
+  m_AnchoredPosition: {x: -388, y: 311}
   m_SizeDelta: {x: 238.65, y: 63.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958695117
@@ -662,7 +663,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 42
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -682,7 +683,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958695115}
   m_CullTransparentMesh: 1
---- !u!1 &1303266558
+--- !u!1 &1182268651
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -690,8 +691,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1303266560}
-  - component: {fileID: 1303266559}
+  - component: {fileID: 1182268653}
+  - component: {fileID: 1182268652}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -699,13 +700,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &1303266559
+--- !u!108 &1182268652
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303266558}
+  m_GameObject: {fileID: 1182268651}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
@@ -761,16 +762,16 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &1303266560
+--- !u!4 &1182268653
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303266558}
+  m_GameObject: {fileID: 1182268651}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 5.49, y: 2.89, z: -11.21}
+  m_LocalPosition: {x: 4.81, y: 2.47, z: -19.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -789,7 +790,7 @@ GameObject:
   - component: {fileID: 2002181629}
   - component: {fileID: 2002181628}
   - component: {fileID: 2002181632}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +839,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc26b7fbde8d34b479e0b5d4926e5068, type: 2}
+  - {fileID: 2100000, guid: fe73461d41381db45815c23c5a97ec94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -877,8 +878,8 @@ Transform:
   m_GameObject: {fileID: 2002181627}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 14.587838, y: 8.363046, z: 1}
+  m_LocalPosition: {x: 0.0125, y: 0, z: 1}
+  m_LocalScale: {x: 14.563039, y: 8.363046, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -905,5 +906,5 @@ SceneRoots:
   - {fileID: 196481252}
   - {fileID: 253367578}
   - {fileID: 2002181631}
-  - {fileID: 1303266560}
   - {fileID: 57019116}
+  - {fileID: 1182268653}
