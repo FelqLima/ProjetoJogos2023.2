@@ -11,6 +11,9 @@ public class PlayerSpaceshipController : MonoBehaviour
     private float _x, _y;
     private Text _score;
 
+    [SerializeField]
+    private GameObject _resetButton;
+
     // Rigidbody2D necessario para movimentar a nave usando a fisica
     private Rigidbody2D _rb2d;
 
@@ -44,11 +47,13 @@ public class PlayerSpaceshipController : MonoBehaviour
     // Detectar quando algum outro objeto colidir com a nave do jogador
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy")){
+        if (other.CompareTag("Enemy") || other.CompareTag("Laser")){
             _score = GameObject.Find("Score").GetComponent<Text>();
             _score.text = "Game Over";
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+
+            _resetButton.SetActive(true);
         }
     }
 

@@ -5,11 +5,11 @@ using UnityEngine;
 public class RepeatingTask : MonoBehaviour
 {
     [SerializeField]
-    public GameObject enemy;
+    private GameObject[] enemies;
 
     [SerializeField]
     private float x = 6;
-    
+
     private float y = 5;
 
     // Start is called before the first frame update
@@ -25,7 +25,9 @@ public class RepeatingTask : MonoBehaviour
     }
 
     void NewEnemy()
-    {
-        Instantiate(enemy, new Vector3(Random.Range(-x,x),y,0), transform.rotation);
+    {       
+        var random = Random.Range(0, enemies.Length);
+        var randomX = Random.Range(-x,x);
+        Instantiate(enemies[random] , new Vector3(randomX,y,0), transform.rotation);
     }
 }

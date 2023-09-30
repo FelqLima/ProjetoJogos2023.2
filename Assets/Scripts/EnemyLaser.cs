@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LaserPrefab : MonoBehaviour
+public class LaserEnemy : MonoBehaviour
 {
     [SerializeField]
     private float _speedY = 10f;
@@ -20,19 +20,13 @@ public class LaserPrefab : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-       _rb2d.MovePosition(_rb2d.position + new Vector2(0,_speedY)*Time.deltaTime);
+        _rb2d.MovePosition(_rb2d.position + new Vector2(0, -_speedY) * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Enemy")){
-            
-            other.gameObject.GetComponent<EnemySpaceshipController>().Destruir();
-            Destroy(this.gameObject);
-            
-        } else if (other.CompareTag("Laser")) {
-
-            Destroy(other.gameObject);
+        if (other.CompareTag("Player"))
+        { 
             Destroy(this.gameObject);
         }
     }
